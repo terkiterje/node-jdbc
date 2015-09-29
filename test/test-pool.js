@@ -104,5 +104,11 @@ module.exports = {
       });
       test.done();
     });
+  },
+  testterminate: function(test) {
+    testpool.terminate(function(err) {
+      test.equal(null,err);
+      test.done();
+    });
   }
 };
